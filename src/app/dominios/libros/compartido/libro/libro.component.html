@@ -1,0 +1,9 @@
+<hr>
+
+<h3>{{libro.volumeInfo.title}}</h3>
+@if (libro.volumeInfo.imageLinks.smallThumbnail){
+  <img [src]="libro.volumeInfo.imageLinks.smallThumbnail" alt="portada libro"/>
+} @else {
+  <img [src]="urlNoImagen"/>
+}
+<button (click)="anadirFavoritos(libro)">Añadir a favoritos</button>

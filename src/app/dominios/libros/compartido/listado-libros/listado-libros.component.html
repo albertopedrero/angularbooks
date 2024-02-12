@@ -1,0 +1,13 @@
+
+<ul>
+
+  @for (libro of listadoLibros.items; track libro; let i = $index){
+    <li>
+      {{i+1}}.
+      <app-libro
+        [libro]="libro"
+        (libroFavorito)="anadirFavoritoPadre($event)"></app-libro>
+    </li>
+  }
+
+</ul>
