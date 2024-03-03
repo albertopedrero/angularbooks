@@ -3,17 +3,17 @@ import { LibrosService } from '../../servicios/libros.service';
 import { ListadoLibrosComponent } from '../../compartido/listado-libros/listado-libros.component';
 
 @Component({
-  selector: 'app-leyendo',
+  selector: 'app-leido',
   standalone: true,
   imports: [ListadoLibrosComponent],
-  templateUrl: './leyendo.component.html',
-  styleUrl: './leyendo.component.css'
+  templateUrl: './leido.component.html',
+  styleUrl: './leido.component.css'
 })
-export class LeyendoComponent {
+export class LeidoComponent {
   private librosService: LibrosService;
   listadoLibros: any;
   constructor(){
     this.librosService = inject(LibrosService);
-    this.listadoLibros = this.librosService.getLeyendo();
+    this.listadoLibros = this.librosService.getLeidos();
   }
 }

@@ -1,7 +1,7 @@
 
 <ul>
 
-  @for (libro of listadoLibros.items; track libro; let i = $index){
+  @for (libro of listadoLibros; track libro; let i = $index){
     <li>
       {{i+1}}.
       <app-libro
